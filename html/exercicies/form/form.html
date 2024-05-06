@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Usuário</title>
+    <style>
+        input, textarea, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        input[type=radio],
+        input[type=checkbox] {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<h1>Formulário</h1>
+<form method="POST">
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="nome">
+    <input type="password" password="nome">bio 
+    <textarea name="bio" cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="type" value="admin">ADMIN
+        <input type="radio" name="type" value="regular">REGULAR
+        <input type="radio" name="type" value="professor">PROFESSOR
+    </div>
+    <div>
+        <input type="checkbox" name="ativo">Ativo
+    </div>
+    <select name="estado">
+        <option value="">Selecione</option>
+        <option value="ac">Acre</option>
+        <option value="ba">Bahia</option>
+        <option value="ce">Ceara</option>
+    </select>
+
+    <select name="interesses" multiple size="5">
+        <option value="js">Javascript</option>
+        <option value="java">Java</option>
+        <option value="php">Php</option>
+        <option value="phyton">Phyton</option>
+        <option value="go">Go</option>
+        <option value="C">C</option>
+    </select>
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+</form>
+
+
+
+</body>

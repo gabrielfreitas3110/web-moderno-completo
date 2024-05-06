@@ -1,0 +1,73 @@
+<h1>Project</h1>
+<style>
+    ul, li {
+        list-style-type: none;
+    }
+
+    .caret {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    .active::before {
+        transform: rotate(90deg);
+    }
+</style>
+<ul class="tree">
+    <li>
+        <span class="caret" wp-folder>backend</span>
+        <ul>
+            <li>
+                <span class="caret" wp-folder>app</span>
+                <ul>
+                    <li>product.js</li>
+                    <li>user.js</li>
+                    <li>sell.js</li>
+                </ul>
+            </li>
+            <li>
+                <span class="caret" wp-folder>config</span>
+                <ul>
+                    <li>bank.js</li>
+                    <li>routes.js</li>
+                    <li>server.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span class="caret" wp-folder>frontend</span>
+        <ul>
+            <li>
+                <span class="caret" wp-folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('.caret').forEach(folder => {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
+    
+    
